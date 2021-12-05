@@ -36,7 +36,7 @@
 	</style>
 </head>
 <body>
-<?php include_once("header.php"); ?>
+<?php include_once("/header.php"); ?>
 	<div class="container-fluid p-2 justify-content-center row">
 		<div class="jumbotron col-8 pt-0 pb-2 mt-4">
 			<div class="w-100 display-4 mb-4 pb-1">Contact Us</div>
@@ -95,6 +95,6 @@
 		</div>
 		
 	</div>
-	<?php include_once("footer.php"); ?>
+	<?php include_once("/footer.php"); ?>
 	</body>
 	</html>

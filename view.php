@@ -1,4 +1,4 @@
-<?php require_once("lib/layout.php"); $_user->lockPage(); ?>
+<?php require_once("layout.php"); $_user->lockPage(); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

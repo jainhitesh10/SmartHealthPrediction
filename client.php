@@ -1,5 +1,6 @@
 <?php
-require_once(__DIR__.'common.php');
+// where there is __DIR__ there is '/' otherwise no '/'
+require_once(__DIR__.'/common.php');
 
 /*
  This 'account' class deals with the login and signup function
@@ -98,7 +99,8 @@ class account {
 				 @$date_of_reg = common::ist_time();
 
 				  $res = $_db->select($this->user_table,"*","Email='".$email."'");
-				  if(count($res)<1) {
+
+				  if(1) {
 						 $new_user_id = "MU".common::keygen(8);
 						$io = $_db->insert('muser',
 							   array($new_user_id, $name, $email, $pass, $gender, $phone, $age, $date_of_reg),
@@ -364,13 +366,13 @@ class user extends account
 		else {
 			return '';
 		}
-	} // << End accountLink()   -----------------------------------------------------
+	} // << End accountLink()   E=
 
 	public function logout() {
 		global $_g;
 		session_unset(); // remove all session variables
 		session_destroy(); // destroy the session
-		header("Location: index.php");
+		header("Location: /index.php");
 		exit();
 	} // << End logout()   -----------------------------------------------------
 
@@ -387,7 +389,7 @@ class user extends account
 	public function unlockPage() {  // Prevent logged user to access this page
 		global $_g;
 	  if($this->isLogged())
-		header("Location: index.php");
+		header("Location: /index.php");
 	} // << End unlockPage()   -----------------------------------------------------
 
 } // << End class defination

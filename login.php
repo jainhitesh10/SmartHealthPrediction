@@ -1,5 +1,5 @@
 <?php
-require_once('lib/client.php');
+require_once('client.php');
 $_user->unlockPage();
 ?>
 <!DOCTYPE html>
