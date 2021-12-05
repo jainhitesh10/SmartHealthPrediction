@@ -19,9 +19,9 @@ class Database
 
     public function connect() {
         if(!$this->con) {
-			$this->mysqli = @new MySQLi($this->serverhost,$this->username,$this->password);
+			$this->mysqli = mysqli_connect($this->serverhost,$this->username,$this->password);//@new MySQLi($this->serverhost,$this->username,$this->password);
 
-            if($this->mysqli && $this->ping()) {
+            if($this->mysqli) {       //     if($this->mysqli && $this->ping()) {
 				$this->con = true;
 				if(@$this->runQuery("USE ".$this->database))
 				    $this->database_selected = true;

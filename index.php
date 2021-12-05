@@ -1,4 +1,4 @@
-<?php include_once("lib/layout.php"); ?>
+<?php include_once("layout.php"); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
